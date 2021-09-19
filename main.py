@@ -22,7 +22,7 @@ while(1):
     albumName = lastTrack['album']['#text']
     songName = lastTrack['name']
     if(songName != previousSongName):
-        status = "🔊 " + songName + " by " + artistName + "\n"  + "📀 " + albumName
+        status = "Abhilash Sadanand is listening to" + "\n" "🔊 " + songName + " by " + artistName + "\n"  + "📀 " + albumName
         try:
             api.update_status(status)
         except:
