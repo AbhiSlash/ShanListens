@@ -15,7 +15,7 @@ api = tweepy.API(auth)
 previousSongName = ""
 # Fetching the playing song
 while(1):
-    response = requests.get("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=derptag&api_key=9b49d26565bb4392f5a2a28b42a84838&format=json")
+    response = requests.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=derptag&api_key=9b49d26565bb4392f5a2a28b42a84838&format=json")
     recentTracks = response.json()
     lastTrack = recentTracks['recenttracks']['track'][0]
     artistName = lastTrack['artist']['#text']
